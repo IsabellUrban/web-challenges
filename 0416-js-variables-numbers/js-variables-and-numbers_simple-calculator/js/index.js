@@ -14,46 +14,40 @@ const exponentButton = document.querySelector('[data-js="exponent"]');
 const moduloButton = document.querySelector('[data-js="modulo"]');
 
 addButton.addEventListener("click", () => {
+  const resultAddButton = operand1 + operand2;
+  console.log(resultAddButton);
   // 1. Add the two operands and store the result in a variable. Log the variable's value to the console.
 });
 
-const resultAddButton = operand1 + operand2;
-console.log(resultAddButton);
-
 subtractButton.addEventListener("click", () => {
+  const resultSubstractButton = operand1 - operand2;
+  console.log(resultSubstractButton);
   // 2. Subtract the two operands and store the result in a variable. Log the variable's value to the console.
 });
 
-const resultSubstractButton = operand1 - operand2;
-console.log(resultSubstractButton);
-
 multiplyButton.addEventListener("click", () => {
+  const resultMultiplyButton = operand1 * operand2;
+  console.log(resultMultiplyButton);
   // 3. Multiply the two operands and store the result in a variable. Log the variable's value to the console.
 });
 
-const resultMultiplyButton = operand1 * operand2;
-console.log(resultMultiplyButton);
-
 divideButton.addEventListener("click", () => {
+  const resultDivideButton = operand1 / operand2;
+  console.log(resultDivideButton);
   // 4. Divide the two operands and store the result in a variable. Log the variable's value to the console.
 });
 
-const resultDivideButton = operand1 / operand2;
-console.log(resultDivideButton);
-
 exponentButton.addEventListener("click", () => {
+  const resultExponentButton = operand1 ** operand2;
+  console.log(resultExponentButton);
   // 5. Raise "operand1" to the value of "operand2" and store the result in a variable. Log the variable's value to the console.
 });
 
-const resultExponentButton = operand1 ** operand2;
-console.log(resultExponentButton);
-
 moduloButton.addEventListener("click", () => {
+  const resultModuloButton = operand1 % operand2;
+  console.log(resultModuloButton);
   // 6. Calculate the remainder when dividing "operand1" by "operand2" and store the result in a variable. Log the variable's value to the console.
 });
-
-const resultModuloButton = operand1 % operand2;
-console.log(resultModuloButton);
 
 /*
 Update the first operand
