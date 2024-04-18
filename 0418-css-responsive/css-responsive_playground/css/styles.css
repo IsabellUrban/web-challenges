@@ -73,13 +73,13 @@ h1 {
   height: 100px;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .box--two {
     width: 200px;
   }
 }
 
-@media (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .box--two {
     width: 400px;
   }
