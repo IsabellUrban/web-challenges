@@ -61,3 +61,7 @@ numberOfSales = numberOfSales + 2;
 rating++;
 
 logBookData();
+
+numberOfSales = numberOfSales + 300;
+
+logBookData();
