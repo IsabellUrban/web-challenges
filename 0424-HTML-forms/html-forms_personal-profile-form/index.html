@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Personal Profile Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h2 id=" title">Create your Personal Profile</h2>
+    <section>
+      <form aria-labelledby="title">
+        <p>
+          We want to get to know you! Please enter your personal information.
+        </p>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="input-first-name">First Name:</label>
+          <input
+            type="text"
+            name="first-name"
+            id="input-first-name"
+            required
+            minlength="3"
+          />
+          <label for="input-last-name">Last Name:</label>
+          <input type="text" name="last-name" id="input-last-name" required />
+          <label for="input-birthday">Your Birthday:</label>
+          <input type="date" name="birthday" id="input-birthday" required />
+        </fieldset>
+        <p>
+          Can you tell us a little bit more? We want to annoy you with unwanted
+          ads.
+        </p>
+        <fieldset>
+          <legend>Further Information</legend>
+          <label for="input-favourite-color">Favourite Color:</label>
+          <input
+            type="color"
+            name="color"
+            id="input-favourite-color"
+            value="#e5430f"
+          />
+          <label for="input-favourite-pet">What's your favourite pet?</label>
+          <select name="pet" id="input-favourite-pet">
+            <option value="">--Please choose an option--</option>
+            <option value="chicken-turtle">Chicken Turtle</option>
+            <option value="jellyfish-shark">Jellyfish Shark</option>
+            <option value="happy-fish">Happy colored Fish</option>
+          </select>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
