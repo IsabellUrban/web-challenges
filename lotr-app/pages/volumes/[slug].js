@@ -1,10 +1,12 @@
 import { volumes } from "../lib/data";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
-export default function Volume1() {
-  const volume = volumes.find(
-    (volume) => volume.slug === "the-fellowship-of-the-ring"
-  );
+export default function VolumeDetail() {
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const volume = volumes.find((volume) => volume.slug === slug);
   console.log(volume);
   return (
     <>
@@ -19,8 +21,8 @@ export default function Volume1() {
         ))}
       </ul>
       <Image
-        src="/images/the-fellowship-of-the-ring.png"
-        alt="Picture of the The fellowship of the Ring"
+        src={volume.cover}
+        alt="Picture of the book"
         width={140}
         height={230}
       />
