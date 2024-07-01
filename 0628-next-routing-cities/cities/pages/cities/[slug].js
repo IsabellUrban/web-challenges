@@ -2,6 +2,28 @@ import { cities } from "@/lib/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import styled from "styled-components";
+
+const StyledLink = styled(Link)`
+  width: 35%;
+  background-color: orange;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+
+  &:hover {
+    background-color: lightgray;
+    color: black;
+    transform: scale (font: 700);
+  }
+`;
+
+const StyledBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
 
 export default function CityPage() {
   const router = useRouter();
@@ -33,21 +55,21 @@ export default function CityPage() {
       <h2>Description:</h2>
       <p>{currentCity.description}</p>
 
-      <div>
+      <StyledBox>
         {prevCity && (
-          <Link href={`/cities/${prevCity.slug}`}>
+          <StyledLink href={`/cities/${prevCity.slug}`}>
             Go to previous city: {prevCity.name}
-          </Link>
+          </StyledLink>
         )}
-      </div>
-      <div>
+
         {nextCity && (
-          <Link href={`/cities/${nextCity.slug}`}>
+          <StyledLink href={`/cities/${nextCity.slug}`}>
             Go to next city: {nextCity.name}
-          </Link>
+          </StyledLink>
         )}
-      </div>
-      <Link href="/cities">Go back to all cities!</Link>
+
+        <StyledLink href="/cities">Go back to all cities!</StyledLink>
+      </StyledBox>
     </>
   );
 }
