@@ -3,11 +3,11 @@ import Chance from "chance";
 
 const chance = new Chance();
 
-const name = chance.string();
-const age = chance.string();
-const profession = chance.string();
-
 export const server = createServer((request, response) => {
+  const name = chance.name();
+  const age = chance.age();
+  const profession = chance.profession();
+
   if (request.url === "/") {
     response.statusCode = 200;
     response.end(
