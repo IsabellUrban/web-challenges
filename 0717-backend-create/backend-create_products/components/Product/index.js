@@ -29,14 +29,14 @@ export default function Product() {
 
     console.log("Updated Product", productData);
 
-    // const response = await fetch(`/api/products/${id}`, {
-    //   method: "PUT",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(productData),
-    // });
-    // if (response.ok) {
-    //   mutate();
-    // }
+    const response = await fetch(`/api/products/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(productData),
+    });
+    if (response.ok) {
+      mutate();
+    }
   }
 
   async function handleDeleteProduct() {
@@ -81,6 +81,10 @@ export default function Product() {
             onSubmit={handleEditProduct}
             value={data}
             isEditMode={true}
+            valueName={data.name}
+            valueDescription={data.description}
+            valuePrice={data.price}
+            valueCurrency={data.currency}
           ></ProductForm>
         )}{" "}
         <br />
